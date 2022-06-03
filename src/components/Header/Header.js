@@ -1,15 +1,13 @@
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
-import { Button } from "@mui/material";
 import "./Header.css";
 
 import { ReactComponent as GlamLogo } from "../../assets/GlamLogo.svg";
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const [navbarScrolled, setNavbarScrolled] = useState(false);
   const [click, setClick] = useState(false);
   const [showButton, setShowButton] = useState(true);
@@ -79,6 +77,19 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link
+                to="artist"
+                spy={true}
+                smooth={true}
+                offset={-200}
+                duration={100}
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                ARTIST
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 to="gallery"
                 spy={true}
                 smooth={true}
@@ -92,15 +103,15 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link
-                to="artist"
+                to="services"
                 spy={true}
                 smooth={true}
-                offset={-200}
+                offset={0}
                 duration={100}
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                ARTIST
+                SERVICES
               </Link>
             </li>
             <li className="nav-item">

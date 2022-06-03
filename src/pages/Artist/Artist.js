@@ -1,21 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Artist.css";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Artist() {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
+  const animation = useAnimation();
+  const animation1 = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 2,
+          bounce: 0.3,
+        },
+      });
+      animation1.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 2,
+          bounce: 0.3,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({ x: "-100vw" });
+    }
+    if (!inView) {
+      animation1.start({ x: "100vw" });
+    }
+  }, [inView]);
+
   return (
     <>
       <section className="artist-divider">
         <h4 className="artist-header">GET TO KNOW THE ARTIST</h4>
       </section>
-      <div className="artist-container" id="artist">
-        <div className="artist-img-container">
-          <img
-            alt="artist"
-            src="/images/artist-img.webp"
-            className="artist-img"
-          />
-        </div>
-        <div className="artist-text-container">
+      <div ref={ref} className="artist-container" id="artist">
+        <motion.div className="artist-text-container" animate={animation}>
           <h3 className="artist-text-header">Hello there! I'm Sammi.</h3>
           <p className="artist-text">
             I was born & raised in Florida and my passion is & always has been
@@ -27,7 +55,14 @@ function Artist() {
             everything sanitized and safe. I want to give my clients the best
             experience possible. Book with me now!
           </p>
-        </div>
+        </motion.div>
+        <motion.div className="artist-img-container" animate={animation1}>
+          <img
+            alt="artist"
+            src="/images/artist-img.webp"
+            className="artist-img"
+          />
+        </motion.div>
       </div>
     </>
   );

@@ -15,11 +15,11 @@ function Hero() {
       </div>
       <div className="hero-overlay" />
       <div className="right-hero-container">
-        <span class="big-circle1"></span>
+        <span className="big-circle1"></span>
         <div className="right-inner-container">
           <h1 className="landing-header">Freelance Makeup Artist</h1>
           <p className="landing-body-text">
-            IT’S YOUR TURN TO FEEL BEAUTIFUL AND CONFIDENT!
+            IT’S YOUR TURN TO FEEL BEAUTIFUL AND CONFIDENT
           </p>
           <div className="heroBtn" style={{ marginTop: Theme.spacing(5) }}>
             <Link
