@@ -1,11 +1,10 @@
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useState, useEffect, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 import "./Header.css";
 
-import { ReactComponent as GlamLogo } from "../../assets/GlamLogo.svg";
+import SamLogo from "../../assets/images/SamLogo1.png";
 
 const Navbar = () => {
   const [navbarScrolled, setNavbarScrolled] = useState(false);
@@ -52,7 +51,7 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="hero" onClick={closeMobileMenu}>
-            <GlamLogo className="navbar-logo" />
+            <img src={SamLogo} alt="logo" className="navbar-logo" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             {click ? (
@@ -80,7 +79,7 @@ const Navbar = () => {
                 to="artist"
                 spy={true}
                 smooth={true}
-                offset={-200}
+                offset={-160}
                 duration={100}
                 className="nav-links"
                 onClick={closeMobileMenu}
@@ -106,7 +105,7 @@ const Navbar = () => {
                 to="services"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-125}
                 duration={100}
                 className="nav-links"
                 onClick={closeMobileMenu}
@@ -125,7 +124,7 @@ const Navbar = () => {
             </li>
           </ul>
           {showButton && (
-            <Link className="info-btn1" to="book">
+            <Link className="info-btn3" to="book">
               BOOK ME
             </Link>
           )}

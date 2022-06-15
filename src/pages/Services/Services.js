@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 function Services() {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
   });
   const animation = useAnimation();
 
@@ -16,7 +16,7 @@ function Services() {
         opacity: 1,
         transition: {
           type: "tween",
-          duration: 1,
+          duration: 0.5,
         },
       });
     }

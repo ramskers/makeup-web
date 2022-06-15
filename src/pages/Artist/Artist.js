@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Artist.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import artist from "../../assets/images/artist-img1.webp";
 
 function Artist() {
   const { ref, inView } = useInView({
@@ -16,7 +17,7 @@ function Artist() {
         x: 0,
         transition: {
           type: "spring",
-          duration: 2,
+          duration: 1,
           bounce: 0.3,
         },
       });
@@ -24,7 +25,7 @@ function Artist() {
         x: 0,
         transition: {
           type: "spring",
-          duration: 2,
+          duration: 1,
           bounce: 0.3,
         },
       });
@@ -38,13 +39,13 @@ function Artist() {
   }, [inView]);
 
   return (
-    <>
+    <div className="art-background">
       <section className="artist-divider">
         <h4 className="artist-header">GET TO KNOW THE ARTIST</h4>
       </section>
       <div ref={ref} className="artist-container" id="artist">
         <motion.div className="artist-text-container" animate={animation}>
-          <h3 className="artist-text-header">Hello there! I'm Sammi.</h3>
+          <h3 className="artist-text">Hello there! I'm Sammi.</h3>
           <p className="artist-text">
             I was born & raised in Florida and my passion is & always has been
             makeup. I am a certified Freelanced Makeup Artist from OMA. I have
@@ -57,14 +58,10 @@ function Artist() {
           </p>
         </motion.div>
         <motion.div className="artist-img-container" animate={animation1}>
-          <img
-            alt="artist"
-            src="/images/artist-img.webp"
-            className="artist-img"
-          />
+          <img alt="artist" src={artist} className="artist-img" />
         </motion.div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -4,6 +4,7 @@
   --spacing3: 16px;
   --spacing4: 24px;
   --spacing5: 32px;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {

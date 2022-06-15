@@ -9,7 +9,7 @@ function Hero() {
       <div className="hero-image-container">
         <img
           alt="dog running in water with loot paw collar"
-          src="/images/glam-hero.webp"
+          src="/images/glam-hero1.webp"
           className="dog-image"
         />
       </div>
@@ -17,10 +17,9 @@ function Hero() {
       <div className="right-hero-container">
         <span className="big-circle1"></span>
         <div className="right-inner-container">
-          <h1 className="landing-header">Freelance Makeup Artist</h1>
-          <p className="landing-body-text">
-            IT’S YOUR TURN TO FEEL BEAUTIFUL AND CONFIDENT
-          </p>
+          <h1 className="landing-header">Makeup Artist</h1>
+          <p className="landing-body-text">BEAUTIFUL.</p>
+          <p className="landing-body-text">CONFIDENT.</p>
           <div className="heroBtn" style={{ marginTop: Theme.spacing(5) }}>
             <Link
               className="info-btn2"

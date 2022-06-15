@@ -1,3 +1,7 @@
+.art-background {
+    background-color: #ffd3ea;
+}
+
 .artist-divider {
     display: flex;
     flex: 1;
@@ -5,12 +9,13 @@
     align-items: center;
     font-size: 48px;
     padding: 24px;
-    margin-top: 18px;
+    padding-bottom: 0;
 }
 
 .artist-header {
     text-align: center;
-    font-family: cursive;
+    font-family: 'Seymour One', sans-serif;    
+    color: #ff2773;
     font-weight: 300;
 }
 
@@ -20,6 +25,8 @@
     align-items: center;
     justify-content: center;
     padding: 64px;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
 .artist-img-container {
@@ -27,14 +34,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
   
 .artist-img {
     width: 75%;
     object-fit: contain;
-    border-radius: 50px;
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.50);
-
 }
 
 .artist-text-container {
@@ -43,10 +48,24 @@
     align-items: center;
 }
 
+.artist-text {
+    font-weight: 300;
+    font-family: 'Seymour One', sans-serif;   
+    word-spacing: 8px; 
+}
+
+@media (max-width:1120px) {
+    .artist-container {
+
+    }
+}
+
 @media (max-width:760px) {
     .artist-container {
         display: flex;
         flex-direction: column-reverse;
+        padding: 18px;
+        padding-bottom: 64px;
     }
 
     .artist-img {

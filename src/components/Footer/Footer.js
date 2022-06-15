@@ -1,7 +1,8 @@
 import { Facebook, Instagram, Twitter, YouTube } from "@material-ui/icons";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import "./Footer.css";
+import SamLogo from "../../assets/images/SamLogo1.png";
 
 function Footer() {
   return (
@@ -9,12 +10,23 @@ function Footer() {
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <h2>About Us</h2>
-            <Link to="/">Testimonials</Link>
+            <h2>About Me</h2>
+            <Link
+              to="artist"
+              spy={true}
+              smooth={true}
+              offset={-160}
+              duration={100}
+              style={{ cursor: "pointer" }}
+            >
+              Artist
+            </Link>
           </div>
           <div className="footer-link-items">
             <h2>Contact Me</h2>
-            <Link to="book">Contact</Link>
+            <Link to="book" style={{ cursor: "pointer" }}>
+              Contact
+            </Link>
           </div>
         </div>
         <div className="footer-link-wrapper">
@@ -35,27 +47,29 @@ function Footer() {
                 fontSize: "24px",
               }}
             >
-              GlamBySam
+              <img src={SamLogo} alt="logo" className="navbar-logo" />
             </Link>
           </div>
-          <small className="website-rights">GlamBySam © 2022</small>
+          <small className="website-rights">S A M © 2022</small>
           <div className="social-icons">
-            <Link
+            <a
               className="Social-icon-link"
-              to="/"
+              href="https://www.facebook.com/sammi.oneill.18"
               target="_blank"
               aria-label="Facebook"
+              rel="noreferrer"
             >
               <Facebook style={{ color: "#fff" }} />
-            </Link>
-            <Link
+            </a>
+            <a
               className="Social-icon-link"
-              to="/"
+              href="https://www.instagram.com/glam.bysamx/"
               target="_blank"
               aria-label="Instagram"
+              rel="noreferrer"
             >
               <Instagram style={{ color: "#fff" }} />
-            </Link>
+            </a>
             <Link
               className="Social-icon-link"
               to="/"

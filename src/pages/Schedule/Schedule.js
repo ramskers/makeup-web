@@ -19,10 +19,10 @@ export const Schedule = () => {
 
     emailjs
       .sendForm(
-        "service_lsw7x8m",
-        "template_m5uou4m",
+        "service_bvykwgq",
+        "template_4itrg6b",
         form.current,
-        "zZBYChGUolbxdNk2w"
+        "Mr_fzoMY5latYftsp"
       )
       .then(
         (result) => {
@@ -56,83 +56,87 @@ export const Schedule = () => {
   });
 
   return (
-    <div>
-      <div className="container" id="book">
-        <span className="big-circle"></span>
-        <img src="img/shape.png" className="square" alt="" />
-        <div className="form">
-          <div className="contact-info">
-            <h3 className="title">BOOK NOW</h3>
-            <p className="text">
-              Please note, travel and accommodation expenses may be required.
-            </p>
+    <div className="container" id="book">
+      <span className="big-circle"></span>
+      <div className="form">
+        <div className="contact-info">
+          <h3 className="title">BOOK NOW</h3>
+          <p className="text">
+            Please note, travel and accommodation expenses may be required.
+          </p>
 
-            <div className="info">
-              <div className="information">
-                <MapOutlinedIcon className="icon" />
-                <p>Clearwater, Florida</p>
-              </div>
-              <div className="information">
-                <EmailOutlinedIcon className="icon" alt="" />
-                <a className="information" href="mailto:ramtin123@gmail.com">
-                  ramtin123@gmail.com
-                </a>
-              </div>
-              <div className="information">
-                <PhoneIphoneOutlinedIcon className="icon" alt="" />
-                <a className="information" href="tel:941-243-8452">
-                  (941) 243 8452
-                </a>
-              </div>
+          <div className="info">
+            <div className="information">
+              <MapOutlinedIcon className="icon" />
+              <p>Clearwater, Florida</p>
             </div>
-
-            <div className="social-media">
-              <p>Connect with me :</p>
-              <div className="social-icons">
-                <a href="#">
-                  <FacebookOutlinedIcon />
-                </a>
-                <a href="#">
-                  <TwitterOutlinedIIcon />
-                </a>
-                <a href="#">
-                  <InstagramOutlinedIIcon />
-                </a>
-                <a href="#">
-                  <YouTubeOutlinedIIcon />
-                </a>
-              </div>
+            <div className="information">
+              <EmailOutlinedIcon className="icon" alt="" />
+              <a className="information" href="mailto:glam.bysamxx@gmail.com">
+                glam.bysamxx@gmail.com
+              </a>
+            </div>
+            <div className="information">
+              <PhoneIphoneOutlinedIcon className="icon" alt="" />
+              <a className="information" href="tel:941-243-8452">
+                (941) 243 8452
+              </a>
             </div>
           </div>
-          <div className="contact-form">
-            <span className="circle one"></span>
-            <span className="circle two"></span>
 
-            <form ref={form} onSubmit={sendEmail}>
-              <h3 className="title">Contact Me</h3>
-              <div className="input-container">
-                <input type="text" name="user_name" className="input" />
-                <label htmlFor="">Name</label>
-                <span>Username</span>
-              </div>
-              <div className="input-container">
-                <input type="email" name="user_email" className="input" />
-                <label htmlFor="">Email</label>
-                <span>Email</span>
-              </div>
-              <div className="input-container">
-                <input type="tel" name="phone_number" className="input" />
-                <label htmlFor="">Phone</label>
-                <span>Phone</span>
-              </div>
-              <div className="input-container textarea">
-                <textarea name="message" className="input"></textarea>
-                <label htmlFor="">Message</label>
-                <span>Message</span>
-              </div>
-              <input type="submit" value="Send" className="info-btn" />
-            </form>
+          <div className="social-media">
+            <p>Connect with me :</p>
+            <div className="social-icons">
+              <a
+                href="https://www.facebook.com/sammi.oneill.18"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FacebookOutlinedIcon />
+              </a>
+              <a
+                href="https://www.instagram.com/glam.bysamx/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <InstagramOutlinedIIcon />
+              </a>
+              <a href="#">
+                <TwitterOutlinedIIcon />
+              </a>
+              <a href="#">
+                <YouTubeOutlinedIIcon />
+              </a>
+            </div>
           </div>
+        </div>
+        <div className="contact-form">
+          <span className="circle one"></span>
+          <span className="circle two"></span>
+          <form ref={form} onSubmit={sendEmail}>
+            <h3 className="title">Contact Me</h3>
+            <div className="input-container">
+              <input type="text" name="user_name" className="input" />
+              <label htmlFor="">Name</label>
+              <span>Username</span>
+            </div>
+            <div className="input-container">
+              <input type="email" name="user_email" className="input" />
+              <label htmlFor="">Email</label>
+              <span>Email</span>
+            </div>
+            <div className="input-container">
+              <input type="tel" name="phone_number" className="input" />
+              <label htmlFor="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div className="input-container textarea">
+              <textarea name="message" className="input"></textarea>
+              <label htmlFor="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" className="info-btn" />
+          </form>
         </div>
       </div>
     </div>

@@ -1,3 +1,7 @@
+.gallery-background {
+    background-color: #ff9dc5;
+}
+
 .Gallerycontainer {
 	box-sizing: border-box;
 	margin-top: 0;
@@ -13,9 +17,9 @@
     font-size: 48px;
     padding: 24px;
     margin-top: 0px;
-	font-family: cursive;
+	font-family: 'Seymour One', sans-serif;    
 	font-weight: 300;
-	color: black;
+	color: #fff;
 }
 
 
@@ -35,7 +39,19 @@ hr {
 	padding: 0 4px;
 }
 
+.column2 {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+
 .column img {
+	vertical-align: middle;
+	width: 100%;
+	margin-top: 8px;
+}
+
+.column2 img {
 	vertical-align: middle;
 	width: 100%;
 	margin-top: 8px;
@@ -51,8 +67,11 @@ footer {
 
 @media (max-width: 768px) {
 	.column {
-		flex: 50%;
 		max-width: 50%;
+	}
+
+	.column2 {
+		display: none;
 	}
 
     .row {
@@ -66,7 +85,6 @@ footer {
 
 @media (max-width: 576px) {
 	.column {
-		flex: 100%;
 		max-width: 100%;
 	}
 }
